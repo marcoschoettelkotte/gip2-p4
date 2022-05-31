@@ -21,10 +21,18 @@ using namespace std;
 
 class Graph {
 public:
+    Graph(vector<vector<int>> matrix){
+        this->matrix_ = matrix;
+    };
     void Add(Node &node);
+    void AddMatrix(int size);
     string ToString();
+    string PrintMatrix();
+    void AddMatrixNode(int column, int row);
+    bool IsConnected(int column, int row);
 private:
     vector<Node> nodes_;
+    vector<vector<int>> matrix_;
 };
 
 #endif /* graph_hpp */

@@ -7,17 +7,19 @@
 
 #include <iostream>
 #include <string>
+#include <fstream>
 #include "node/node.hpp"
 #include "node/graph/graph.hpp"
 using namespace std;
 
 int main(int argc, const char * argv[]) {
-//    string name = "FOO";
-//    string type = "box";
-//    float a = 2.3;
-//    float b = 3.5;
+    ifstream ostream;
+    vector<vector<int>> matrix;
+    Graph graph(matrix);
+    int columns;
+    cin >> columns;
+    if(!cin.good()) return EXIT_FAILURE;
     
-    Graph graph;
     while(true){
         string type;
         string name;
@@ -26,6 +28,7 @@ int main(int argc, const char * argv[]) {
         
         cin >> type;
         if(!cin.good()) break;
+        if(type == "E") break;
         cin >> name;
         if(!cin.good()) break;
         cin >> x;
@@ -36,7 +39,22 @@ int main(int argc, const char * argv[]) {
         Node node(name, type, x, y);
         graph.Add(node);
     }
-    cout << graph.ToString() << endl;
+
+    graph.AddMatrix(columns);
+    while(true){
+        int col;
+        int row;
+        cin >> col;
+        if(!cin.good()) break;
+        cin >> row;
+        if(!cin.good()) break;
+        graph.AddMatrixNode(col, row);
+        
+    }
+   
+    cout << graph.PrintMatrix() << endl;
     
+    
+    cout << "Finished" << endl;
     return EXIT_SUCCESS;
 }

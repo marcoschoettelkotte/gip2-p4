@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3B78DE1928357AD4003EC137 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B78DE1828357AD4003EC137 /* main.cpp */; };
+		3B78DE2228357B19003EC137 /* node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B78DE2028357B19003EC137 /* node.cpp */; };
+		3B78DE2728358325003EC137 /* fast_node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B78DE2528358325003EC137 /* fast_node.cpp */; };
+		3B78DE2A28358330003EC137 /* slow_node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B78DE2828358330003EC137 /* slow_node.cpp */; };
+		3B78DE2E28358A23003EC137 /* graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B78DE2C28358A23003EC137 /* graph.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,14 @@
 /* Begin PBXFileReference section */
 		3B78DE1528357AD4003EC137 /* gip2-p4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "gip2-p4"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B78DE1828357AD4003EC137 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3B78DE2028357B19003EC137 /* node.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = node.cpp; sourceTree = "<group>"; };
+		3B78DE2128357B19003EC137 /* node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = node.hpp; sourceTree = "<group>"; };
+		3B78DE2528358325003EC137 /* fast_node.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = fast_node.cpp; sourceTree = "<group>"; };
+		3B78DE2628358325003EC137 /* fast_node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fast_node.hpp; sourceTree = "<group>"; };
+		3B78DE2828358330003EC137 /* slow_node.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = slow_node.cpp; sourceTree = "<group>"; };
+		3B78DE2928358330003EC137 /* slow_node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = slow_node.hpp; sourceTree = "<group>"; };
+		3B78DE2C28358A23003EC137 /* graph.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = graph.cpp; sourceTree = "<group>"; };
+		3B78DE2D28358A23003EC137 /* graph.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = graph.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +69,49 @@
 		3B78DE1728357AD4003EC137 /* gip2-p4 */ = {
 			isa = PBXGroup;
 			children = (
+				3B78DE1F28357AFF003EC137 /* node */,
 				3B78DE1828357AD4003EC137 /* main.cpp */,
 			);
 			path = "gip2-p4";
+			sourceTree = "<group>";
+		};
+		3B78DE1F28357AFF003EC137 /* node */ = {
+			isa = PBXGroup;
+			children = (
+				3B78DE2B28358A17003EC137 /* graph */,
+				3B78DE24283582F4003EC137 /* slow_node */,
+				3B78DE23283582E8003EC137 /* fast_node */,
+				3B78DE2028357B19003EC137 /* node.cpp */,
+				3B78DE2128357B19003EC137 /* node.hpp */,
+			);
+			path = node;
+			sourceTree = "<group>";
+		};
+		3B78DE23283582E8003EC137 /* fast_node */ = {
+			isa = PBXGroup;
+			children = (
+				3B78DE2528358325003EC137 /* fast_node.cpp */,
+				3B78DE2628358325003EC137 /* fast_node.hpp */,
+			);
+			path = fast_node;
+			sourceTree = "<group>";
+		};
+		3B78DE24283582F4003EC137 /* slow_node */ = {
+			isa = PBXGroup;
+			children = (
+				3B78DE2828358330003EC137 /* slow_node.cpp */,
+				3B78DE2928358330003EC137 /* slow_node.hpp */,
+			);
+			path = slow_node;
+			sourceTree = "<group>";
+		};
+		3B78DE2B28358A17003EC137 /* graph */ = {
+			isa = PBXGroup;
+			children = (
+				3B78DE2C28358A23003EC137 /* graph.cpp */,
+				3B78DE2D28358A23003EC137 /* graph.hpp */,
+			);
+			path = graph;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B78DE2A28358330003EC137 /* slow_node.cpp in Sources */,
 				3B78DE1928357AD4003EC137 /* main.cpp in Sources */,
+				3B78DE2E28358A23003EC137 /* graph.cpp in Sources */,
+				3B78DE2228357B19003EC137 /* node.cpp in Sources */,
+				3B78DE2728358325003EC137 /* fast_node.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
